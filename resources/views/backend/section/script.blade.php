@@ -6,24 +6,33 @@
 <script src="{{ asset('backend/assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
 <script src="{{ asset('backend/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
 
-<script src="{{asset('backend/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js')}}"></script>
-<script src="{{asset('backend/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
-<script src="{{asset('backend/assets/plugins/chartjs/js/chart.js')}}"></script>
-<script src="{{asset('backend/assets/js/index.js')}}"></script>
+<script src="{{ asset('backend/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
+<script src="{{ asset('backend/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+<script src="{{ asset('backend/assets/plugins/chartjs/js/chart.js') }}"></script>
+<script src="{{ asset('backend/assets/js/index.js') }}"></script>
+
+<script src="{{ asset('backend/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('backend/assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
+
+<!----Sweet Alert---->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+
+
 
 <!--Password show & hide js -->
 <script>
     $(document).ready(function () {
-        $("#show_hide_password a").on("click", function (event) {
+        $("#show_hide_password a").on('click', function (event) {
             event.preventDefault();
-            if ($("#show_hide_password input").attr("type") == "text") {
-                $("#show_hide_password input").attr("type", "password");
-                $("#show_hide_password i").addClass("bx-hide");
-                $("#show_hide_password i").removeClass("bx-show");
-            } else if ($("#show_hide_password input").attr("type") == "password") {
-                $("#show_hide_password input").attr("type", "text");
-                $("#show_hide_password i").removeClass("bx-hide");
-                $("#show_hide_password i").addClass("bx-show");
+            if ($('#show_hide_password input').attr("type") == "text") {
+                $('#show_hide_password input').attr('type', 'password');
+                $('#show_hide_password i').addClass("bx-hide");
+                $('#show_hide_password i').removeClass("bx-show");
+            } else if ($('#show_hide_password input').attr("type") == "password") {
+                $('#show_hide_password input').attr('type', 'text');
+                $('#show_hide_password i').removeClass("bx-hide");
+                $('#show_hide_password i').addClass("bx-show");
             }
         });
     });
@@ -49,5 +58,70 @@
     });
 </script>
 
+<!---Flora editor--->
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'>
+</script>
+
+<script>
+    // Initialize Froala Editor with a fixed height
+    new FroalaEditor('.editor', {
+        height: 200 // Set height to 200px
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        var table = $('#example2').DataTable({
+            lengthChange: false,
+            buttons: ['copy', 'excel', 'pdf', 'print']
+        });
+
+        table.buttons().container()
+            .appendTo('#example2_wrapper .col-md-6:eq(0)');
+    });
+</script>
+
 <!--app JS-->
 <script src="{{ asset('backend/assets/js/app.js') }}"></script>
+
+<!----Sweet alert toast script--->
+
+<div id="flash" data-success="{{ session('success') }}" data-error="{{ session('error') }}" style="display:none"></div>
+
+<script>
+    const flashEl = document.getElementById('flash');
+    const success = flashEl?.dataset.success?.trim();
+    const error = flashEl?.dataset.error?.trim();
+
+    if (success) {
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'success',
+            title: success,
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            background: '#fff',
+        });
+    } else if (error) {
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'error',
+            title: error,
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            background: '#fff',
+        });
+    }
+</script>
+
+@stack('scripts')
