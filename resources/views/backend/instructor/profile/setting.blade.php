@@ -47,12 +47,8 @@
                                             <h6 class="mb-0">Senha atual</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input
-                                                type="password"
-                                                name="current_password"
-                                                class="form-control"
-                                                placeholder="Digite sua senha atual"
-                                            />
+                                            <input type="password" name="current_password" class="form-control"
+                                                placeholder="Digite sua senha atual" />
                                         </div>
                                     </div>
 
@@ -61,12 +57,8 @@
                                             <h6 class="mb-0">Nova senha</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input
-                                                type="password"
-                                                class="form-control"
-                                                name="new_password"
-                                                placeholder="Digite sua nova senha"
-                                            />
+                                            <input type="password" class="form-control" name="new_password"
+                                                placeholder="Digite sua nova senha" />
                                         </div>
                                     </div>
 
@@ -75,12 +67,8 @@
                                             <h6 class="mb-0">Confirmar senha</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input
-                                                type="password"
-                                                name="new_password_confirmation"
-                                                class="form-control"
-                                                placeholder="Confirme sua nova senha"
-                                            />
+                                            <input type="password" name="new_password_confirmation" class="form-control"
+                                                placeholder="Confirme sua nova senha" />
                                         </div>
                                     </div>
 

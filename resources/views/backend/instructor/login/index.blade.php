@@ -47,29 +47,21 @@
 
                                             <div class="col-12">
                                                 <label for="inputEmailAddress" class="form-label">E-mail</label>
-                                                <input
-                                                    type="email"
-                                                    class="form-control"
-                                                    name="email"
-                                                    id="inputEmailAddress"
-                                                    value="{{ old('email') }}"
-                                                    placeholder="seuemail@exemplo.com"
-                                                >
+                                                <input type="email" class="form-control" name="email"
+                                                    id="inputEmailAddress" value="{{ old('email') }}"
+                                                    placeholder="seuemail@exemplo.com">
                                                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                             </div>
 
                                             <div class="col-12">
                                                 <label for="inputChoosePassword" class="form-label">Senha</label>
                                                 <div class="input-group" id="show_hide_password">
-                                                    <input
-                                                        type="password"
-                                                        class="form-control border-end-0"
-                                                        name="password"
-                                                        id="inputChoosePassword"
-                                                        placeholder="Digite sua senha"
-                                                    >
+                                                    <input type="password" class="form-control border-end-0"
+                                                        name="password" id="inputChoosePassword"
+                                                        placeholder="Digite sua senha">
 
-                                                    <a href="javascript:;" class="input-group-text bg-transparent" aria-label="Mostrar/ocultar senha">
+                                                    <a href="javascript:;" class="input-group-text bg-transparent"
+                                                        aria-label="Mostrar/ocultar senha">
                                                         <i class="bx bx-hide"></i>
                                                     </a>
                                                 </div>
@@ -78,8 +70,10 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="remember_me" name="remember">
-                                                    <label class="form-check-label" for="remember_me">Manter conectado</label>
+                                                    <input class="form-check-input" type="checkbox" id="remember_me"
+                                                        name="remember">
+                                                    <label class="form-check-label" for="remember_me">Manter
+                                                        conectado</label>
                                                 </div>
                                             </div>
 

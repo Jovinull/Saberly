@@ -18,13 +18,14 @@
 <link href="{{ asset('backend/assets/css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('backend/assets/css/icons.css') }}" rel="stylesheet">
 
- <!-- Theme Style CSS -->
- <link rel="stylesheet" href="{{asset('backend/assets/css/dark-theme.css')}}" />
- <link rel="stylesheet" href="{{asset('backend/assets/css/semi-dark.css')}}" />
- <link rel="stylesheet" href="{{asset('backend/assets/css/header-colors.css')}}" />
+<!-- Theme Style CSS -->
+<link rel="stylesheet" href="{{asset('backend/assets/css/dark-theme.css')}}" />
+<link rel="stylesheet" href="{{asset('backend/assets/css/semi-dark.css')}}" />
+<link rel="stylesheet" href="{{asset('backend/assets/css/header-colors.css')}}" />
 
- <!-- Include SweetAlert2 CSS and JS -->
+<!-- Include SweetAlert2 CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
 
 <!----Flora Editor--->
-<link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css' rel='stylesheet' type='text/css' />
+<link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css' rel='stylesheet'
+    type='text/css' />

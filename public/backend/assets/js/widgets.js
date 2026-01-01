@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 	"use strict";
 	var e = {
 		series: [{
@@ -67,7 +67,7 @@ $(function() {
 			},
 			y: {
 				title: {
-					formatter: function(e) {
+					formatter: function (e) {
 						return ""
 					}
 				}
@@ -145,7 +145,7 @@ $(function() {
 			},
 			y: {
 				title: {
-					formatter: function(e) {
+					formatter: function (e) {
 						return ""
 					}
 				}
@@ -223,7 +223,7 @@ $(function() {
 			},
 			y: {
 				title: {
-					formatter: function(e) {
+					formatter: function (e) {
 						return ""
 					}
 				}
@@ -301,7 +301,7 @@ $(function() {
 			},
 			y: {
 				title: {
-					formatter: function(e) {
+					formatter: function (e) {
 						return ""
 					}
 				}
@@ -379,7 +379,7 @@ $(function() {
 			},
 			y: {
 				title: {
-					formatter: function(e) {
+					formatter: function (e) {
 						return ""
 					}
 				}
@@ -457,7 +457,7 @@ $(function() {
 			},
 			y: {
 				title: {
-					formatter: function(e) {
+					formatter: function (e) {
 						return ""
 					}
 				}
@@ -535,7 +535,7 @@ $(function() {
 			},
 			y: {
 				title: {
-					formatter: function(e) {
+					formatter: function (e) {
 						return ""
 					}
 				}
@@ -613,7 +613,7 @@ $(function() {
 			},
 			y: {
 				title: {
-					formatter: function(e) {
+					formatter: function (e) {
 						return ""
 					}
 				}

@@ -20,7 +20,8 @@
 						<div class="card shadow-none bg-transparent rounded-0 mb-0">
 							<div class="card-body">
 								<img src="{{ asset('backend/assets/images/login-images/login-cover.svg') }}"
-									class="img-fluid auth-img-cover-login" width="650" alt="Ilustração de acesso ao painel do Saberly" />
+									class="img-fluid auth-img-cover-login" width="650"
+									alt="Ilustração de acesso ao painel do Saberly" />
 							</div>
 						</div>
 
@@ -46,7 +47,8 @@
 											@csrf
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">E-mail</label>
-												<input type="email" class="form-control" name="email" value="{{ old('email') }}" id="inputEmailAddress"
+												<input type="email" class="form-control" name="email"
+													value="{{ old('email') }}" id="inputEmailAddress"
 													placeholder="seuemail@exemplo.com" required>
 												<x-input-error :messages="$errors->get('email')" class="mt-2" />
 											</div>
@@ -55,10 +57,10 @@
 												<label for="inputChoosePassword" class="form-label">Senha</label>
 												<div class="input-group" id="show_hide_password">
 													<input type="password" required class="form-control border-end-0"
-														id="inputChoosePassword"
-														name="password"
+														id="inputChoosePassword" name="password"
 														placeholder="Digite sua senha">
-													<a href="javascript:;" class="input-group-text bg-transparent" aria-label="Mostrar/ocultar senha">
+													<a href="javascript:;" class="input-group-text bg-transparent"
+														aria-label="Mostrar/ocultar senha">
 														<i class="bx bx-hide"></i>
 													</a>
 													<x-input-error :messages="$errors->get('password')" class="mt-2" />
@@ -69,8 +71,8 @@
 												<div class="form-check form-switch">
 													<input class="form-check-input" type="checkbox"
 														id="flexSwitchCheckChecked">
-													<label class="form-check-label"
-														for="flexSwitchCheckChecked">Manter conectado</label>
+													<label class="form-check-label" for="flexSwitchCheckChecked">Manter
+														conectado</label>
 												</div>
 											</div>
 
