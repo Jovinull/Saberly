@@ -41,22 +41,27 @@
 									</div>
 
 									<div class="form-body">
-										<form class="row g-3">
+										<form class="row g-3" method="POST" action="{{ route('login') }}">
+
+											@csrf
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">E-mail</label>
-												<input type="email" class="form-control" id="inputEmailAddress"
-													placeholder="seuemail@exemplo.com">
+												<input type="email" class="form-control" name="email" value="{{ old('email') }}" id="inputEmailAddress"
+													placeholder="seuemail@exemplo.com" required>
+												<x-input-error :messages="$errors->get('email')" class="mt-2" />
 											</div>
 
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Senha</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0"
+													<input type="password" required class="form-control border-end-0"
 														id="inputChoosePassword"
+														name="password"
 														placeholder="Digite sua senha">
 													<a href="javascript:;" class="input-group-text bg-transparent" aria-label="Mostrar/ocultar senha">
 														<i class="bx bx-hide"></i>
 													</a>
+													<x-input-error :messages="$errors->get('password')" class="mt-2" />
 												</div>
 											</div>
 

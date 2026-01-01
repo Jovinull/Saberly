@@ -10,4 +10,9 @@ class AdminController extends Controller
     {
         return view('backend.admin.login.index');
     }
+
+    public function dashboard()
+    {
+        return view('backend.admin.dashboard.index');
+    }
 }
