@@ -12,7 +12,7 @@
                         <li class="breadcrumb-item">
                             <a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Dados do Perfil</li>
+                        <li class="breadcrumb-item active" aria-current="page">Alterar Senha</li>
                     </ol>
                 </nav>
             </div>
@@ -27,8 +27,7 @@
 
                     <div class="col-lg-8">
                         <div class="card">
-                            <form method="post" enctype="multipart/form-data"
-                                action="{{ route('instructor.profile.store') }}">
+                            <form method="post" action="{{ route('instructor.passwordSetting') }}">
                                 @csrf
 
                                 <div class="card-body">
@@ -45,132 +44,43 @@
 
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Nome completo</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="text" name="name" class="form-control"
-                                                value="{{ auth()->user()->name }}" />
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">E-mail</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="email" class="form-control" name="email"
-                                                value="{{ auth()->user()->email }}" />
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Telefone</h6>
+                                            <h6 class="mb-0">Senha atual</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
                                             <input
-                                                type="text"
-                                                name="phone"
+                                                type="password"
+                                                name="current_password"
                                                 class="form-control"
-                                                value="{{ auth()->user()->phone }}"
-                                                placeholder="Digite seu telefone"
+                                                placeholder="Digite sua senha atual"
                                             />
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Cidade</h6>
+                                            <h6 class="mb-0">Nova senha</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
                                             <input
-                                                type="text"
-                                                name="city"
+                                                type="password"
                                                 class="form-control"
-                                                value="{{ auth()->user()->city }}"
-                                                placeholder="Digite sua cidade"
+                                                name="new_password"
+                                                placeholder="Digite sua nova senha"
                                             />
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">País</h6>
+                                            <h6 class="mb-0">Confirmar senha</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
                                             <input
-                                                type="text"
-                                                name="country"
+                                                type="password"
+                                                name="new_password_confirmation"
                                                 class="form-control"
-                                                value="{{ auth()->user()->country }}"
-                                                placeholder="Digite seu país"
+                                                placeholder="Confirme sua nova senha"
                                             />
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Gênero</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <select class="form-select" name="gender">
-                                                <option value="male">Masculino</option>
-                                                <option value="female">Feminino</option>
-                                                <option value="other">Outro</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Experiência</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input
-                                                type="text"
-                                                name="experience"
-                                                class="form-control"
-                                                value="{{ auth()->user()->experience }}"
-                                                placeholder="Ex.: Desenvolvedor Web, Designer, Professor(a)"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Bio</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <textarea
-                                                placeholder="Fale um pouco sobre você"
-                                                class="form-control"
-                                                name="bio"
-                                                rows="6"
-                                            >{{ auth()->user()->bio }}</textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Endereço</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input
-                                                type="text"
-                                                name="address"
-                                                class="form-control"
-                                                value="{{ auth()->user()->address }}"
-                                                placeholder="Digite seu endereço"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Foto de perfil</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="file" name="photo" class="form-control" id="Photo" />
                                         </div>
                                     </div>
 
