@@ -3,7 +3,7 @@
 @section('content')
     <div class="page-content">
 
-        @include('backend.section.breadcrumb', ['title'=> 'SubCategory', 'sub_title'=> 'Insert-SubCategory']);
+        @include('backend.section.breadcrumb', ['title' => 'SubCategory', 'sub_title' => 'Insert-SubCategory']);
 
 
         <div class="card col-md-8">
@@ -52,8 +52,7 @@
 
                         <div class="col-md-6">
                             <label for="slug" class="form-label">Slug</label>
-                            <input type="text" class="form-control" name="slug" id="slug"
-                                placeholder="Enter the slug">
+                            <input type="text" class="form-control" name="slug" id="slug" placeholder="Enter the slug">
                         </div>
 
                         <div class="col-md-12">

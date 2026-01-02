@@ -3,7 +3,7 @@
 @section('content')
     <div class="page-content">
 
-        @include('backend.section.breadcrumb', ['title'=> 'Category', 'sub_title'=> 'Insert-Category']);
+        @include('backend.section.breadcrumb', ['title' => 'Category', 'sub_title' => 'Insert-Category']);
 
 
         <div class="card col-md-8">
@@ -18,11 +18,13 @@
 
                     </div>
 
-                    <form class="row g-3" method="post" action="{{route('admin.category.store')}}" enctype="multipart/form-data">
+                    <form class="row g-3" method="post" action="{{route('admin.category.store')}}"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="col-md-6">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter the category name">
+                            <input type="text" class="form-control" name="name" id="name"
+                                placeholder="Enter the category name">
                         </div>
                         <div class="col-md-6">
                             <label for="slug" class="form-label">Slug</label>
@@ -57,6 +59,6 @@
 
 @push('scripts')
 
-<script src="{{asset('customjs/admin/category.js')}}"></script>
+    <script src="{{asset('customjs/admin/category.js')}}"></script>
 
 @endpush

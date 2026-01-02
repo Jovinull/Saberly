@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     @include('backend.section.link')
-    <title>Saberly - Painel do Instrutor</title>
+    <title>LMS - Instructor Dashboard</title>
 </head>
 
 <body>
@@ -24,13 +24,18 @@
         </div>
         <!--end page wrapper -->
 
+
         @include('backend.section.footer')
+
+
 
     </div>
     <!--end wrapper-->
 
+
     <!-- Bootstrap JS -->
     @include('backend.section.script')
+
 </body>
 
 </html>

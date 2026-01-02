@@ -6,7 +6,7 @@
 
     <div class="page-content">
         <!--breadcrumb-->
-        @include('backend.section.breadcrumb', ['title'=> 'Category', 'sub_title'=> 'Update-Category']);
+        @include('backend.section.breadcrumb', ['title' => 'Category', 'sub_title' => 'Update-Category']);
         <!--end breadcrumb-->
         <div class="row">
             <div class="col-md-8">
@@ -40,8 +40,8 @@
 
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" name="name" id="name"
-                                    placeholder="Category Name" value={{$category->name}}>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Category Name"
+                                    value={{$category->name}}>
                             </div>
                             <div class="col-md-6">
                                 <label for="slug" class="form-label">Slug</label>
@@ -57,8 +57,8 @@
 
 
                             <div class="col-md-6">
-                                <img src="{{ $category->image ? asset($category->image) : '' }}" id='photoPreview' width="60" heighr="60"
-                                    style="margin-top: 15px;" />
+                                <img src="{{ $category->image ? asset($category->image) : '' }}" id='photoPreview'
+                                    width="60" heighr="60" style="margin-top: 15px;" />
 
                             </div>
 

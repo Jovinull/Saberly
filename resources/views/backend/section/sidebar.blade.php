@@ -28,10 +28,10 @@
                 <div class="menu-title">Manage Category</div>
             </a>
             <ul>
-                <li  class="{{ setSidebar(['admin.category*']) }}">
-                     <a href="{{route('admin.category.index')}}"><i class='bx bx-radio-circle'></i>All Category</a>
+                <li class="{{ setSidebar(['admin.category*']) }}">
+                    <a href="{{route('admin.category.index')}}"><i class='bx bx-radio-circle'></i>All Category</a>
                 </li>
-                <li class="{{ setSidebar(['admin.subcategory*']) }}" >
+                <li class="{{ setSidebar(['admin.subcategory*']) }}">
                     <a href="{{route('admin.subcategory.index')}}"><i class='bx bx-radio-circle'></i>All SubCategory</a>
                 </li>
 
