@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\AdminProfileController;
 use App\Http\Controllers\backend\InstructorController;
 use App\Http\Controllers\backend\InstructorProfileController;
 use App\Http\Controllers\ProfileController;
@@ -17,6 +18,11 @@ Route::middleware(['auth', 'verified', 'role:admin'])->prefix('admin')->name('ad
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::post('/logout', [AdminController::class, 'destroy'])
         ->name('logout');
+
+    Route::get('/profile', [AdminProfileController::class, 'index'])->name('profile');
+    Route::post('/profile/store', [AdminProfileController::class, 'store'])->name('profile.store');
+    Route::get('/setting', [AdminProfileController::class, 'setting'])->name('setting');
+    Route::post('/password/setting', [AdminProfileController::class, 'passwordSetting'])->name('passwordSetting');
 });
 
 Route::get('/dashboard', function () {
