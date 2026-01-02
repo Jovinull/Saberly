@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,5 +29,23 @@ if (!function_exists('setSidebar')) {
             }
         }
         return null;
+    }
+}
+
+/* Global Use in category  */
+
+if (!function_exists('getCategories')) {
+    function getCategories()
+    {
+
+        return Category::with('subcategory')->get();
+    }
+}
+
+
+if (!function_exists('getCourseCategories')) {
+    function getCourseCategories()
+    {
+        return Category::with('course', 'course.user', 'course.course_goal')->get();
     }
 }

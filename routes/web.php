@@ -6,12 +6,8 @@ use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\InstructorController;
 use App\Http\Controllers\backend\InstructorProfileController;
 use App\Http\Controllers\backend\SubcategoryController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\frontend\FrontendDashboardController;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 /* Admin Login */
 Route::get('/admin/login', [AdminController::class, 'login'])->name('admin.login');
@@ -48,10 +44,7 @@ Route::middleware(['auth', 'verified', 'role:instructor'])->prefix('instructor')
     Route::post('/password/setting', [InstructorProfileController::class, 'passwordSetting'])->name('passwordSetting');
 });
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+/* frontend route */
+Route::get('/', [FrontendDashboardController::class, 'home'])->name('frontend.home');
 
 require __DIR__ . '/auth.php';
