@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\AdminProfileController;
+use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\InstructorController;
 use App\Http\Controllers\backend\InstructorProfileController;
+use App\Http\Controllers\backend\SubcategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +25,9 @@ Route::middleware(['auth', 'verified', 'role:admin'])->prefix('admin')->name('ad
     Route::post('/profile/store', [AdminProfileController::class, 'store'])->name('profile.store');
     Route::get('/setting', [AdminProfileController::class, 'setting'])->name('setting');
     Route::post('/password/setting', [AdminProfileController::class, 'passwordSetting'])->name('passwordSetting');
+
+    Route::resource('category', CategoryController::class);
+    Route::resource('subcategory', SubcategoryController::class);
 });
 
 Route::get('/dashboard', function () {
