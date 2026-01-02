@@ -1,0 +1,165 @@
+<!-- File: public/brand/saberly-banner.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Saberly - Full-Stack Learning Management System banner">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1020"/>
+      <stop offset="0.55" stop-color="#17113A"/>
+      <stop offset="1" stop-color="#0E2A4A"/>
+    </linearGradient>
+
+    <!-- Accent gradient -->
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8B5CF6"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 .6 0" result="colored"/>
+      <feMerge>
+        <feMergeNode in="colored"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Card shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+
+    <!-- Subtle noise (safe + light) -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" />
+      <feColorMatrix type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 .10 0"/>
+    </filter>
+
+    <!-- Clip for background pattern -->
+    <clipPath id="clip">
+      <rect x="0" y="0" width="1200" height="320" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+
+    <!-- Decorative blobs -->
+    <g opacity="0.9" filter="url(#glow)">
+      <circle cx="1040" cy="80" r="110" fill="#22D3EE" opacity="0.10"/>
+      <circle cx="1120" cy="210" r="150" fill="#8B5CF6" opacity="0.10"/>
+      <circle cx="880" cy="250" r="130" fill="#60A5FA" opacity="0.08"/>
+    </g>
+
+    <!-- Pattern dots -->
+    <g opacity="0.20">
+      <g fill="#FFFFFF">
+        <circle cx="90" cy="58" r="2"/>
+        <circle cx="120" cy="58" r="2"/>
+        <circle cx="150" cy="58" r="2"/>
+        <circle cx="180" cy="58" r="2"/>
+        <circle cx="210" cy="58" r="2"/>
+        <circle cx="90" cy="88" r="2"/>
+        <circle cx="120" cy="88" r="2"/>
+        <circle cx="150" cy="88" r="2"/>
+        <circle cx="180" cy="88" r="2"/>
+        <circle cx="210" cy="88" r="2"/>
+      </g>
+    </g>
+
+    <!-- Very subtle noise overlay -->
+    <rect width="1200" height="320" filter="url(#noise)" opacity="0.25"/>
+  </g>
+
+  <!-- Foreground card -->
+  <g filter="url(#shadow)">
+    <rect x="44" y="44" width="1112" height="232" rx="26" fill="#0B1220" opacity="0.70" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  </g>
+
+  <!-- Left icon block: Owl + book (simple geometric) -->
+  <g transform="translate(95,78)">
+    <!-- Accent ring -->
+    <circle cx="78" cy="78" r="78" fill="url(#accent)" opacity="0.18"/>
+    <circle cx="78" cy="78" r="74" fill="#0B1220" opacity="0.75" stroke="#FFFFFF" stroke-opacity="0.10"/>
+
+    <!-- Owl body -->
+    <g transform="translate(18,18)">
+      <!-- Body -->
+      <path d="M60 132c34 0 62-26 62-62S94 8 60 8  -2 36 -2 70s28 62 62 62Z"
+            fill="#0F1B2E" stroke="#FFFFFF" stroke-opacity="0.10"/>
+      <!-- Head -->
+      <path d="M60 18c-26 0-47 17-47 38 0 25 21 44 47 44s47-19 47-44c0-21-21-38-47-38Z"
+            fill="#101C33" stroke="#FFFFFF" stroke-opacity="0.10"/>
+      <!-- Ears -->
+      <path d="M22 36l-10-12 4 20" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+      <path d="M98 36l10-12-4 20" fill="none" stroke="#22D3EE" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+
+      <!-- Eyes -->
+      <circle cx="42" cy="58" r="14" fill="#0B1220" stroke="#FFFFFF" stroke-opacity="0.20"/>
+      <circle cx="78" cy="58" r="14" fill="#0B1220" stroke="#FFFFFF" stroke-opacity="0.20"/>
+      <circle cx="42" cy="58" r="6" fill="#F8FAFC"/>
+      <circle cx="78" cy="58" r="6" fill="#F8FAFC"/>
+      <circle cx="44" cy="56" r="2" fill="#0B1220" opacity="0.75"/>
+      <circle cx="80" cy="56" r="2" fill="#0B1220" opacity="0.75"/>
+
+      <!-- Beak -->
+      <path d="M60 66l-7 10h14l-7-10Z" fill="#F59E0B" opacity="0.95"/>
+
+      <!-- Book -->
+      <g transform="translate(22,96)">
+        <path d="M8 10c0-4 3-7 7-7h32c6 0 11 3 11 7v32c0 4-5 7-11 7H15c-4 0-7-3-7-7V10Z"
+              fill="#0B1220" stroke="#FFFFFF" stroke-opacity="0.14"/>
+        <path d="M58 10c0-4 3-7 7-7h32c6 0 11 3 11 7v32c0 4-5 7-11 7H65c-4 0-7-3-7-7V10Z"
+              fill="#0B1220" stroke="#FFFFFF" stroke-opacity="0.14"/>
+        <path d="M58 11v36" stroke="url(#accent)" stroke-width="3" opacity="0.85"/>
+        <path d="M20 16h26M20 24h22M20 32h26" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="2" stroke-linecap="round"/>
+        <path d="M70 16h26M70 24h22M70 32h26" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Title + subtitle -->
+  <g transform="translate(260,104)">
+    <text x="0" y="0"
+          font-size="54"
+          font-weight="800"
+          letter-spacing="0.5"
+          fill="#F8FAFC"
+          font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+      Saberly
+    </text>
+
+    <!-- Accent underline -->
+    <rect x="0" y="16" width="230" height="6" rx="3" fill="url(#accent)" opacity="0.95"/>
+
+    <text x="0" y="48"
+          font-size="18"
+          font-weight="600"
+          fill="#CBD5E1"
+          opacity="0.95"
+          font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+      Full-Stack Learning Management System (LMS)
+    </text>
+
+    <text x="0" y="78"
+          font-size="14"
+          font-weight="500"
+          fill="#94A3B8"
+          opacity="0.95"
+          font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+      Admin Dashboard • Instructor Workspace • Checkout • Wishlist • Blog • Realtime Chat
+    </text>
+  </g>
+  <!-- Outer rounding mask stroke (subtle) -->
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+</svg>
