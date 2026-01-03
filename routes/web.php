@@ -52,6 +52,11 @@ Route::middleware(['auth', 'verified', 'role:instructor'])->prefix('instructor')
     Route::post('/password/setting', [InstructorProfileController::class, 'passwordSetting'])->name('passwordSetting');
 });
 
+//Frontend Route
+
+Route::get('/', [FrontendDashboardController::class, 'home'])->name('frontend.home');
+Route::get('/course-details/{slug}', [FrontendDashboardController::class, 'view'])->name('course-details');
+
 /* frontend route */
 Route::get('/', [FrontendDashboardController::class, 'home'])->name('frontend.home');
 
