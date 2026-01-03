@@ -37,6 +37,21 @@
 
             </ul>
         </li>
+
+        <li
+            class="{{ setSidebar(['admin.slider*', 'admin.info*', 'admin.partner*', 'admin.subscriber*', 'admin.site-setting*', 'admin.page-setting*']) }}">
+            <a href="javascript:;" class="has-arrow">
+
+                <div class="parent-icon"><i class="bx bx-category"></i>
+                </div>
+                <div class="menu-title">Application Settings</div>
+            </a>
+            <ul>
+                <li class="{{ setSidebar(['admin.slider*']) }}">
+                    <a href="{{route('admin.slider.index')}}"><i class='bx bx-radio-circle'></i>Manage Slider</a>
+                </li>
+            </ul>
+        </li>
     </ul>
     <!--end navigation-->
 </div>
