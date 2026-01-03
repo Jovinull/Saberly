@@ -22,22 +22,23 @@
 
                 @foreach($all_categories as $item)
 
-                <div class="col-lg-4 responsive-column-half">
-                    <div class="category-item">
-                        <img class="cat__img lazy" src="{{asset($item->image)}}" data-src="{{ asset($item->image ?? 'frontend/images/img2.jpg') }}"
-                            alt="Category image" width="370" height="246">
-                        <div class="category-content">
-                            <div class="category-inner">
-                                <h3 class="cat__title">
-                                    <a href="#">{{ $item->name }}</a>
-                                </h3>
-                                <p class="cat__meta">0 courses</p>
-                                <a href="#" class="btn theme-btn theme-btn-sm theme-btn-white">Explore<i
-                                        class="la la-arrow-right icon ml-1"></i></a>
-                            </div>
-                        </div><!-- end category-content -->
-                    </div><!-- end category-item -->
-                </div><!-- end col-lg-4 -->
+                    <div class="col-lg-4 responsive-column-half">
+                        <div class="category-item">
+                            <img class="cat__img lazy" src="{{asset($item->image)}}"
+                                data-src="{{ asset($item->image ?? 'frontend/images/img2.jpg') }}" alt="Category image"
+                                width="370" height="246">
+                            <div class="category-content">
+                                <div class="category-inner">
+                                    <h3 class="cat__title">
+                                        <a href="#">{{ $item->name }}</a>
+                                    </h3>
+                                    <p class="cat__meta">{{ $item->course_count }} courses</p>
+                                    <a href="#" class="btn theme-btn theme-btn-sm theme-btn-white">Explore<i
+                                            class="la la-arrow-right icon ml-1"></i></a>
+                                </div>
+                            </div><!-- end category-content -->
+                        </div><!-- end category-item -->
+                    </div><!-- end col-lg-4 -->
 
                 @endforeach
 

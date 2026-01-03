@@ -20,7 +20,10 @@ class FrontendDashboardController extends Controller
         $all_sliders = Slider::all();
         $all_info = InfoBox::all();
 
-        $all_categories = Category::inRandomOrder()->limit(6)->get();
+        $all_categories = Category::withCount('course')
+            ->inRandomOrder()
+            ->limit(6)
+            ->get();
         $categories = Category::all();
         $course_category = Category::with('course', 'course.user', 'course.course_goal')->get();
 
@@ -30,7 +33,9 @@ class FrontendDashboardController extends Controller
     public function view($slug)
     {
 
-        $course = Course::where('course_name_slug', $slug)->with('category', 'subcategory', 'user')->first();
+        $course = Course::where('course_name_slug', $slug)
+            ->with('category', 'subCategory', 'user')
+            ->first();
         $total_lecture = CourseLecture::where('course_id', $course->id)->count();
         $course_content = CourseSection::where('course_id', $course->id)->with('lecture')->get();
 
