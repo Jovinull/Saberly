@@ -19,6 +19,8 @@ return new class extends Migration {
 
             // Add foreign key constraint
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+            $table->unique(['category_id', 'slug']);
         });
     }
 
