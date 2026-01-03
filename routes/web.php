@@ -3,6 +3,7 @@
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\AdminProfileController;
 use App\Http\Controllers\backend\CategoryController;
+use App\Http\Controllers\backend\InfoController;
 use App\Http\Controllers\backend\InstructorController;
 use App\Http\Controllers\backend\InstructorProfileController;
 use App\Http\Controllers\backend\SliderController;
@@ -28,6 +29,9 @@ Route::middleware(['auth', 'verified', 'role:admin'])->prefix('admin')->name('ad
 
     /* Manage Slider Controller */
     Route::resource('slider', SliderController::class);
+
+    /* Manage InfoBox Controller */
+    Route::resource('info', InfoController::class);
 });
 
 Route::get('/dashboard', function () {
