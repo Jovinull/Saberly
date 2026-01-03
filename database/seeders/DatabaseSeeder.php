@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             SubcategorySeeder::class,
             SliderSeeder::class,
+            CourseSeeder::class,
+            CourseGoalSeeder::class,
         ]);
     }
 }
