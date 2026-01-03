@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             SliderSeeder::class,
             CourseSeeder::class,
             CourseGoalSeeder::class,
+            InfoBoxSeeder::class,
         ]);
     }
 }

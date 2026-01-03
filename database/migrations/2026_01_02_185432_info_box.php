@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('info_boxes', function (Blueprint $table) {
             $table->id();
             $table->text('icon');
-            $table->string('title');
+            $table->string('title')->unique();
             $table->text('description');
             $table->timestamps();
         });
