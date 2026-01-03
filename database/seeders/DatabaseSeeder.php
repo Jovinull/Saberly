@@ -14,9 +14,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserTableSeeder::class,
             CategorySeeder::class,
-            SubcategorySeeder::class,
+            SubCategorySeeder::class,
             SliderSeeder::class,
             CourseSeeder::class,
+            CourseSectionSeeder::class,
             CourseGoalSeeder::class,
             InfoBoxSeeder::class,
         ]);
