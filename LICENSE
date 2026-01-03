@@ -1,0 +1,85 @@
+SABERLY SOURCE-AVAILABLE LICENSE (PROPRIETARY)
+Version 1.0 — January 2026
+
+Copyright © 2026 Felipe Jovino.
+All rights reserved.
+
+IMPORTANT NOTICE
+This is a proprietary, source-available license. The source code is publicly visible for
+transparency, evaluation and educational purposes, but its use is restricted as described
+below. Any use beyond what is explicitly permitted requires a separate commercial license.
+
+1) DEFINITIONS
+“Software” means the Saberly project, including source code, documentation, assets, and
+any related materials in this repository.
+“Permitted Use” means the limited rights granted in Section 2.
+“Commercial Use” means any use primarily intended for commercial advantage or monetary
+compensation, including (but not limited to): using the Software in a company, selling
+access, embedding in a paid product, or using it to deliver services to clients.
+“Production Use” means use in a live environment serving real users, customers, students,
+or internal operations of an organization (including intranet).
+“Distribution” means sharing, publishing, sublicensing, selling, or otherwise making the
+Software or a derivative available to third parties.
+
+2) GRANT OF RIGHTS (NON-COMMERCIAL / EVALUATION ONLY)
+Subject to the terms of this license, you are granted a limited, non-exclusive,
+non-transferable, non-sublicensable right to:
+(a) view and study the Software;
+(b) run the Software locally for evaluation, learning, testing, or demonstration purposes
+    (non-production, non-commercial);
+(c) modify the Software for your own evaluation/learning purposes, provided that you do not
+    use it in Production or for Commercial Use, and you do not Distribute it.
+
+3) RESTRICTIONS
+Unless you have an explicit written permission or a commercial license from the Licensor
+(Felipe Jovino), you may NOT:
+(a) use the Software in Production;
+(b) use the Software for Commercial Use;
+(c) Distribute the Software or any derivative works, in source or binary form;
+(d) sell, license, rent, lease, or otherwise monetize the Software or derivatives;
+(e) provide the Software (or a service based on it) to third parties, including as SaaS,
+    hosted platform, consulting deliverable, or managed service;
+(f) remove, alter, or obscure any copyright, license, or attribution notices.
+
+4) OWNERSHIP
+The Software is licensed, not sold. Felipe Jovino retains all right, title, and interest in
+and to the Software. No rights are granted except as explicitly stated in this license.
+
+5) CONTRIBUTIONS
+If you submit a contribution (e.g., pull request, patch, suggestion), you agree that:
+(a) you have the right to submit it; and
+(b) you grant Felipe Jovino a perpetual, worldwide, irrevocable, royalty-free right to use,
+    modify, relicense, and distribute your contribution as part of the Software under any
+    terms, including proprietary and commercial terms.
+
+6) TRADEMARKS
+This license does not grant permission to use the “Saberly” name, logos, or branding for
+promotion, marketing, or product naming without written permission.
+
+7) COMMERCIAL LICENSING
+If you want to use the Software in Production and/or for Commercial Use, you must obtain a
+commercial license from the Licensor.
+
+To request a commercial license, contact:
+felipejovinogamerplay@gmail.com
+
+8) TERMINATION
+This license is effective until terminated. Your rights under this license will terminate
+automatically without notice if you violate any term. Upon termination, you must cease all
+use of the Software and delete all copies in your possession or control.
+
+9) DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NON-INFRINGEMENT. YOU BEAR ALL RISK OF USING THE SOFTWARE.
+
+10) LIMITATION OF LIABILITY
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+11) GOVERNING LAW
+This license shall be governed by the laws of Brazil, without regard to conflict of laws
+principles. Any disputes shall be resolved in the competent courts of Brazil.
+
+END OF TERMS

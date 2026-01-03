@@ -222,4 +222,17 @@ Em projetos LMS, problemas comuns são inconsistência de estado (carrinho/wishl
 
 ## Licença e uso
 
-Este repositório é destinado a estudo/uso como base de LMS e portfólio. Caso exista licença específica no projeto, ela deve prevalecer sobre esta seção.
+O **Saberly** é um projeto com **código público (source-available)** para fins de transparência, estudo e avaliação.
+
+**Você pode:**
+- Ler, estudar e executar localmente para aprendizado e testes (uso não-comercial e não-produção).
+
+**Você NÃO pode (sem autorização/licença comercial):**
+- Usar em **produção** (servindo usuários reais).
+- Usar de forma **comercial** (empresa, clientes, SaaS, plataforma paga, consultoria etc.).
+- **Redistribuir** o código ou versões derivadas (mesmo modificadas).
+
+Para obter **licença comercial** e permissão de uso em produção, entre em contato:
+**felipejovinogamerplay@gmail.com**
+
+> A licença completa está no arquivo `LICENSE` na raiz do repositório e prevalece sobre qualquer outro texto deste README.
