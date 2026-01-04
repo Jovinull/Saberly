@@ -4,6 +4,8 @@ use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\AdminInstructorController;
 use App\Http\Controllers\backend\AdminProfileController;
 use App\Http\Controllers\backend\CategoryController;
+use App\Http\Controllers\backend\CourseController;
+use App\Http\Controllers\backend\CourseSectionController;
 use App\Http\Controllers\backend\InfoController;
 use App\Http\Controllers\backend\InstructorController;
 use App\Http\Controllers\backend\InstructorProfileController;
@@ -56,6 +58,11 @@ Route::middleware(['auth', 'verified', 'role:instructor'])->prefix('instructor')
     Route::post('/profile/store', [InstructorProfileController::class, 'store'])->name('profile.store');
     Route::get('/setting', [InstructorProfileController::class, 'setting'])->name('setting');
     Route::post('/password/setting', [InstructorProfileController::class, 'passwordSetting'])->name('passwordSetting');
+
+    Route::resource('course', CourseController::class);
+    Route::get('/get-subcategories/{categoryId}', [CategoryController::class, 'getSubcategories']);
+
+    Route::resource('course-section', CourseSectionController::class);
 });
 
 //Frontend Route
