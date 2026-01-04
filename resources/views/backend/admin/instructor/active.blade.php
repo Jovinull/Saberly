@@ -102,7 +102,7 @@
                 const row = $(this).closest('tr'); // Find the parent row of the checkbox
 
                 $.ajax({
-                    url: '{{ route('admin.instructor.status') }}',
+                    url: "{{ route('admin.instructor.status') }}",
                     type: 'POST',
                     data: {
                         _token: '{{ csrf_token() }}', // CSRF token for security
