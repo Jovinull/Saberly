@@ -5,7 +5,8 @@
             <div class="section-heading">
                 <h2 class="section__title text-white">{{$title}}</h2>
             </div>
-            <ul class="generic-list-item generic-list-item-white generic-list-item-arrow d-flex flex-wrap align-items-center">
+            <ul
+                class="generic-list-item generic-list-item-white generic-list-item-arrow d-flex flex-wrap align-items-center">
                 <li><a href="index.html">Home</a></li>
                 <li>Pages</li>
                 <li>Shopping Cart</li>
