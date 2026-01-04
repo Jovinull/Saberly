@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             CourseSectionSeeder::class,
             CourseGoalSeeder::class,
             InfoBoxSeeder::class,
+            CourseLectureSeeder::class,
         ]);
     }
 }
