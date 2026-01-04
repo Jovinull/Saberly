@@ -12,6 +12,7 @@ use App\Http\Controllers\backend\InstructorProfileController;
 use App\Http\Controllers\backend\SliderController;
 use App\Http\Controllers\backend\SubcategoryController;
 use App\Http\Controllers\frontend\FrontendDashboardController;
+use App\Http\Controllers\LectureController;
 use Illuminate\Support\Facades\Route;
 
 /* Admin Login */
@@ -63,6 +64,8 @@ Route::middleware(['auth', 'verified', 'role:instructor'])->prefix('instructor')
     Route::get('/get-subcategories/{categoryId}', [CategoryController::class, 'getSubcategories']);
 
     Route::resource('course-section', CourseSectionController::class);
+
+    Route::resource('lecture', LectureController::class);
 });
 
 //Frontend Route
