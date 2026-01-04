@@ -13,14 +13,10 @@
                     </ul>
                     <h3 class="fs-20 font-weight-semi-bold pt-4 pb-2">We are on</h3>
                     <ul class="social-icons social-icons-styled">
-                        <li class="mr-1"><a href="#" class="facebook-bg"><i
-                                    class="la la-facebook"></i></a></li>
-                        <li class="mr-1"><a href="#" class="twitter-bg"><i
-                                    class="la la-twitter"></i></a></li>
-                        <li class="mr-1"><a href="#" class="instagram-bg"><i
-                                    class="la la-instagram"></i></a></li>
-                        <li class="mr-1"><a href="#" class="linkedin-bg"><i
-                                    class="la la-linkedin"></i></a></li>
+                        <li class="mr-1"><a href="#" class="facebook-bg"><i class="la la-facebook"></i></a></li>
+                        <li class="mr-1"><a href="#" class="twitter-bg"><i class="la la-twitter"></i></a></li>
+                        <li class="mr-1"><a href="#" class="instagram-bg"><i class="la la-instagram"></i></a></li>
+                        <li class="mr-1"><a href="#" class="linkedin-bg"><i class="la la-linkedin"></i></a></li>
                     </ul>
                 </div><!-- end footer-item -->
             </div><!-- end col-lg-3 -->
@@ -58,10 +54,13 @@
                     <span class="section-divider section--divider"></span>
                     <div class="mobile-app">
                         <p class="pb-3 lh-24">Download our mobile app and learn on the go.</p>
-                        <a href="#" class="d-block mb-2 hover-s"><img src="images/appstore.png"
-                                alt="App store" class="img-fluid"></a>
-                        <a href="#" class="d-block hover-s"><img src="images/googleplay.png"
-                                alt="Google play store" class="img-fluid"></a>
+                        <a href="#" class="d-block mb-2 hover-s">
+                            <img src="{{ asset('frontend/images/appstore.png') }}" alt="App store" class="img-fluid">
+                        </a>
+                        <a href="#" class="d-block hover-s">
+                            <img src="{{ asset('frontend/images/googleplay.png') }}" alt="Google play store"
+                                class="img-fluid">
+                        </a>
                     </div>
                 </div><!-- end footer-item -->
             </div><!-- end col-lg-3 -->
