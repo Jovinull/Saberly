@@ -92,6 +92,8 @@ Route::middleware(['auth', 'verified', 'role:instructor'])->prefix('instructor')
     Route::resource('course-section', CourseSectionController::class);
 
     Route::resource('lecture', LectureController::class);
+
+    Route::resource('coupon', CouponController::class);
 });
 
 
@@ -130,5 +132,7 @@ Route::post('/remove/cart', [CartController::class, 'removeCart']);
 
 /*  Checkout */
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+/* Coupon Apply    */
+Route::post('/apply-coupon', [CouponController::class, 'applyCoupon']);
 
 require __DIR__ . '/auth.php';
