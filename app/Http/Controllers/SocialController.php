@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use Illuminate\Http\Request;
+use App\Models\User as AppUser;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
+use Laravel\Socialite\Contracts\User as SocialiteUser;
 
 class SocialController extends Controller
 {
@@ -18,30 +18,33 @@ class SocialController extends Controller
     public function googleAuthentication()
     {
         try {
-            // Google থেকে ইউজার তথ্য নিয়ে আসা
+            /** @var SocialiteUser $googleUser */
             $googleUser = Socialite::driver('google')->user();
 
-            // যদি ব্যবহারকারী ইতোমধ্যে ডাটাবেজে থাকে, তাহলে তাকে সেশন লগইন করানো
-            $user = User::where('email', $googleUser->email)->first();
+            $email = $googleUser->getEmail();
+            $name = $googleUser->getName();
+            $avatar = $googleUser->getAvatar();
+
+            if (!$email) {
+                return redirect()->back()->with('error', 'Google não retornou um e-mail para esta conta.');
+            }
+
+            $user = AppUser::where('email', $email)->first();
 
             if (!$user) {
-                // নতুন ব্যবহারকারী তৈরি
-                $user = User::create([
-                    'email' => $googleUser->email,
-                    'name' => $googleUser->name,
-                    'photo' => $googleUser->avatar,
+                $user = AppUser::create([
+                    'email' => $email,
+                    'name' => $name ?? 'Usuário',
+                    'photo' => $avatar,
                     'password' => Hash::make('password@123'),
                     'role' => 'user',
                 ]);
             }
 
-            // ব্যবহারকারীকে সেশন লগইন করানো
             Auth::login($user);
 
-            // লগইন সাফল্য হলে রিডিরেক্ট
             return redirect('/user/dashboard');
         } catch (\Exception $e) {
-            // এরর হলে ব্যাক করুন
             return redirect()->back()->with('error', 'Something went wrong!');
         }
     }
