@@ -104,6 +104,13 @@ Route::middleware(['auth', 'verified', 'role:user'])->prefix('user')->name('user
     Route::post('/logout', [UserController::class, 'destroy'])
         ->name('logout');
 
+    //Profile
+
+    Route::get('/profile', [UserProfileController::class, 'index'])->name('profile');
+    Route::post('/profile/store', [UserProfileController::class, 'store'])->name('profile.store');
+    Route::get('/setting', [UserProfileController::class, 'setting'])->name('setting');
+    Route::post('/password/setting', [UserProfileController::class, 'passwordSetting'])->name('passwordSetting');
+
     /* Wishlist controller */
 
     Route::get('wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
