@@ -70,6 +70,9 @@ Route::middleware(['auth', 'verified', 'role:admin'])->prefix('admin')->name('ad
     Route::resource('instructor', AdminInstructorController::class);
     Route::post('/update-status', [AdminInstructorController::class, 'updateStatus'])->name('instructor.status');
     Route::get('/instructor-active-list', [AdminInstructorController::class, 'instructorActive'])->name('instructor.active');
+
+    /* Manage Site Seetings */
+    Route::resource('site-setting', SiteSettingController::class);
 });
 
 
