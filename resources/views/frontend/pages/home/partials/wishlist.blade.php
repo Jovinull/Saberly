@@ -8,7 +8,8 @@
                 <h5><a href="#">{{ $item->course->course_name }}</a></h5>
                 <span class="d-block lh-18 py-1">{{ $item->course->user->name }}</span>
                 <p class="text-black font-weight-semi-bold lh-18">
-                    ${{ $item->course->selling_price }} <span class="before-price fs-14">${{ $item->course->discount_price }}</span>
+                    ${{ $item->course->selling_price }} <span
+                        class="before-price fs-14">${{ $item->course->discount_price }}</span>
                 </p>
             </div>
         </li>
