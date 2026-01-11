@@ -77,6 +77,16 @@ Route::middleware(['auth', 'verified', 'role:admin'])->prefix('admin')->name('ad
     Route::post('/update-status', [AdminInstructorController::class, 'updateStatus'])->name('instructor.status');
     Route::get('/instructor-active-list', [AdminInstructorController::class, 'instructorActive'])->name('instructor.active');
 
+    /*  Setting Controller */
+    Route::get('/mail-setting', [SettingController::class, 'mailSetting'])->name('mailSetting');
+    Route::put('/mail-settings/update', [SettingController::class, 'updateMailSettings'])->name('mail.settings.update');
+
+    Route::get('/stripe-setting', [SettingController::class, 'stripeSetting'])->name('stripeSetting');
+    Route::post('/stripe-settings/update', [SettingController::class, 'updateStripeSettings'])->name('stripe.settings.update');
+
+    Route::get('/google-setting', [SettingController::class, 'googleSetting'])->name('googleSetting ');
+    Route::post('/google-settings/update', [SettingController::class, 'updateGoogleSettings'])->name('google.settings.update');
+
     /* Manage Site Seetings */
     Route::resource('site-setting', SiteSettingController::class);
 });
